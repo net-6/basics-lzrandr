@@ -6,13 +6,34 @@ namespace Rezolvari
     {
         static void Main(string[] args)
         {
+            //1. Write a method that reads from the console three numbers of type int and prints their sum.
             //  Sum();
+
+            //2. Write a method that reads five numbers from the console and prints the greatest of them.
             // Greatest();
+
+            //3. Write a method that reads from the console the radius "r" of a circle and prints its perimeter and area.
             // Cerc();
+
+            // 4. Write a method that reads from the console two integer numbers(int) and prints
+            //how many numbers between them exist that are divisible with 5.
+            //such that the remainder of their division by 5 is 0.
             // Counter();
+
+            //5.Write a method that reads two numbers from the console and prints the greater of them.
+            //Solve the problem without using conditional statements and with conditional statements.
             // NrMaiMare();
+
+            // 7.Write a method that prints on the console the numbers from 1 to N. 
+            // The number N should be read from the standard input.
             // Numbers();
+
+            // 8. Write a method that prints on the console the numbers from 1 to N,
+            // which are not divisible by 3 and 7 simultaneously. 
+            // The number N should be read from the standard input.
             //  NumbersDivisible();
+
+            // 9. Write a method that reads from the console a series of 5 integers and prints the smallest and largest of them.
             MareMic();
 
         }
@@ -21,14 +42,11 @@ namespace Rezolvari
         static void Sum()
         {
             Console.WriteLine("Introduceti primul numar:");
-            String no1 = Console.ReadLine();
+            int nr1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al doilea numar:");
-            String no2 = Console.ReadLine();
+            int nr2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al treilea numar:");
-            String no3 = Console.ReadLine();
-            int nr1 = int.Parse(no1);
-            int nr2 = int.Parse(no2);
-            int nr3 = int.Parse(no3);
+            int nr3 = int.Parse(Console.ReadLine());
             Console.WriteLine("Suma numerelor introduse este: " + (nr1 + nr2 + nr3));
         }
 
@@ -36,20 +54,15 @@ namespace Rezolvari
         static void Greatest()
         {
             Console.WriteLine("Introduceti primul numar:");
-            String no1 = Console.ReadLine();
+            int nr1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al doilea numar:");
-            String no2 = Console.ReadLine();
+            int nr2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al treilea numar:");
-            String no3 = Console.ReadLine();
+            int nr3 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al patrulea numar:");
-            String no4 = Console.ReadLine();
+            int nr4 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al cincilea numar:");
-            String no5 = Console.ReadLine();
-            int nr1 = int.Parse(no1);
-            int nr2 = int.Parse(no2);
-            int nr3 = int.Parse(no3);
-            int nr4 = int.Parse(no4);
-            int nr5 = int.Parse(no5);
+            int nr5 = int.Parse(Console.ReadLine());
             int max = Math.Max(nr1, Math.Max(nr2, Math.Max(nr3, Math.Max(nr4, nr5))));
             Console.WriteLine("Cel mai mare numar introdus este " + max);
         }
@@ -58,8 +71,7 @@ namespace Rezolvari
         static void Cerc()
         {
             Console.WriteLine("Introduceti Raza unui cerc:");
-            String r = Console.ReadLine();
-            int raza = int.Parse(r);
+            int raza = int.Parse(Console.ReadLine());
             const double pi = 3.14159;
             double perimetrul = 2 * pi * raza;
             double aria = pi * raza * raza;
@@ -72,11 +84,9 @@ namespace Rezolvari
         static void Counter()
         {
             Console.WriteLine("Introduceti primul numar:");
-            String no1 = Console.ReadLine();
+            int nr1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al doilea numar:");
-            String no2 = Console.ReadLine();
-            int nr1 = int.Parse(no1);
-            int nr2 = int.Parse(no2);
+            int nr2 = int.Parse(Console.ReadLine());
             int nrmare = Math.Max(nr1, nr2);
             int nrmic = Math.Min(nr1, nr2);
             int i = nrmic;
@@ -97,11 +107,9 @@ namespace Rezolvari
         static void NrMaiMare()
         {
             Console.WriteLine("Introduceti primul numar:");
-            String no1 = Console.ReadLine();
+            int nr1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Introduceti al doilea numar:");
-            String no2 = Console.ReadLine();
-            int nr1 = int.Parse(no1);
-            int nr2 = int.Parse(no2);
+            int nr2 = int.Parse(Console.ReadLine());
             int nrmare = Math.Max(nr1, nr2);
             Console.WriteLine("Numarul mai mare este: " + nrmare);
             if (nr1 > nr2)
