@@ -45,7 +45,10 @@ namespace Rezolvari
             //*  
             //**
             //*
-            Triangle();
+            //Triangle();
+
+            // 11 * .Write a method that converts a given number from decimal to binary notation(numeral system).
+            DecToBin();
 
         }
 
@@ -201,14 +204,36 @@ namespace Rezolvari
 
                 string result = new String('*', i);
                 Console.WriteLine(result);
-            } 
+            }
             for (int i = 0; i < nr; i++)
             {
-                string result = new String('*', nr-i);
+                string result = new String('*', nr - i);
                 Console.WriteLine(result);
             }
-          
-            
+
         }
+        // 11 * .Write a method that converts a given number from decimal to binary notation(numeral system).
+        static void DecToBin()
+
+        
+        {
+                
+            int nr = int.Parse(Console.ReadLine());
+            // mai simplu sring binar = Convert.ToString(nr, 2);    
+            string rezultat = "";
+            while (nr > 1)
+                
+            {
+                int rest = nr % 2;
+                rezultat = Convert.ToString(rest) + rezultat;
+               nr  /= 2;
+         
+            }
+
+            Console.WriteLine(nr.ToString() + rezultat);
+
+        }
+            
+        
     }
 }
