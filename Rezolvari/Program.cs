@@ -34,7 +34,18 @@ namespace Rezolvari
             //  NumbersDivisible();
 
             // 9. Write a method that reads from the console a series of 5 integers and prints the smallest and largest of them.
-            MareMic();
+            // MareMic();
+
+            //10. Write method that outputs a triangle made of stars with variable size, 
+            //depending on an input parameter.Look at the examples to get an idea.
+            //The input comes as a string number, which needs to be parsed to a number.
+            //The output is a series of lines printed on the console, forming a triangle of variable size.
+            //Input 2:   
+            //Output:   
+            //*  
+            //**
+            //*
+            Triangle();
 
         }
 
@@ -169,6 +180,35 @@ namespace Rezolvari
             int min = Math.Min(nr1, Math.Min(nr2, Math.Min(nr3, Math.Min(nr4, nr5))));
             Console.WriteLine("Cel mai mare numar introdus este " + max);
             Console.WriteLine("Cel mai mic numar introdus este " + min);
+        }
+
+
+        //10. Write method that outputs a triangle made of stars with variable size, 
+        //depending on an input parameter.Look at the examples to get an idea.
+        //The input comes as a string number, which needs to be parsed to a number.
+        //The output is a series of lines printed on the console, forming a triangle of variable size.
+        //Input 2:   
+        //Output:   
+        //*  
+        //**
+        //*
+        static void Triangle()
+        {
+            Console.WriteLine("Introduceti un numar:");
+            int nr = int.Parse(Console.ReadLine());
+            for (int i = 1; i < nr; i++)
+            {
+
+                string result = new String('*', i);
+                Console.WriteLine(result);
+            } 
+            for (int i = 0; i < nr; i++)
+            {
+                string result = new String('*', nr-i);
+                Console.WriteLine(result);
+            }
+          
+            
         }
     }
 }
