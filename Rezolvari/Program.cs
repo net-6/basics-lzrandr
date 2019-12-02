@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Rezolvari
 {
@@ -48,7 +49,10 @@ namespace Rezolvari
             //Triangle();
 
             // 11 * .Write a method that converts a given number from decimal to binary notation(numeral system).
-            DecToBin();
+            // DecToBin();
+
+            // 12*. Write a method that by a given integer N prints the numbers from 1 to N in random order
+            RandomPrint();
 
         }
 
@@ -161,7 +165,6 @@ namespace Rezolvari
                 if (i % (3 * 7) != 0)
                 {
                     Console.Write(" " + i);
-
                 }
             }
         }
@@ -201,7 +204,6 @@ namespace Rezolvari
             int nr = int.Parse(Console.ReadLine());
             for (int i = 1; i < nr; i++)
             {
-
                 string result = new String('*', i);
                 Console.WriteLine(result);
             }
@@ -210,30 +212,37 @@ namespace Rezolvari
                 string result = new String('*', nr - i);
                 Console.WriteLine(result);
             }
-
         }
+
         // 11 * .Write a method that converts a given number from decimal to binary notation(numeral system).
         static void DecToBin()
-
-        
         {
-                
             int nr = int.Parse(Console.ReadLine());
             // mai simplu sring binar = Convert.ToString(nr, 2);    
             string rezultat = "";
-            while (nr > 1)
-                
+            while (nr > 1)   
             {
                 int rest = nr % 2;
                 rezultat = Convert.ToString(rest) + rezultat;
-               nr  /= 2;
+                nr /= 2;
          
             }
-
             Console.WriteLine(nr.ToString() + rezultat);
-
         }
-            
-        
+
+        // 12*. Write a method that by a given integer N prints the numbers from 1 to N in random order
+        static void RandomPrint()
+        {
+            Console.WriteLine("Introduceti un numar:");
+            int n = int.Parse(Console.ReadLine());
+            Random rnd = new Random();
+            var numere = Enumerable.Range(1, n).OrderBy(r => rnd.Next()).ToArray();
+            Console.Write("Numerele aleatorii sunt: ");
+            foreach (var numar in numere)
+            {
+                
+                Console.Write(numar + " ");
+            }
+        }
     }
 }
