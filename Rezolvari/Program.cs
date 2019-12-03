@@ -52,8 +52,22 @@ namespace Rezolvari
             // DecToBin();
 
             // 12*. Write a method that by a given integer N prints the numbers from 1 to N in random order
-            RandomPrint();
+            // RandomPrint();
 
+            //13*. A method which iterates the integers from 1 to 50 For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
+            // For numbers which are multiples of both three and five print "FizzBuzz".
+            // Output : 
+            // fizzbuzz
+            // 1
+            // 2
+            // fizz
+            // 4 
+            // buzz
+            // FizzBuzz();
+
+            // 14 A given company has name, address, phone number, fax number, web site and manager. The manager has name, surname and phone number.
+            // Write a program that reads information about the company and its manager and then prints it on the console.
+            CompanyManager();
         }
 
         //1. Write a method that reads from the console three numbers of type int and prints their sum.
@@ -243,6 +257,61 @@ namespace Rezolvari
                 
                 Console.Write(numar + " ");
             }
+        }
+
+        //13*. A method which iterates the integers from 1 to 50 For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
+        // For numbers which are multiples of both three and five print "FizzBuzz".
+        // Output : 
+        // fizzbuzz
+        // 1
+        // 2
+        // fizz
+        // 4 
+        // buzz
+
+        static void FizzBuzz()
+        {
+            for (int i = 1; i <= 50; i++)
+            {
+                if (i % 15 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        // 14 A given company has name, address, phone number, fax number, web site and manager. The manager has name, surname and phone number.
+        // Write a program that reads information about the company and its manager and then prints it on the console.
+        static void CompanyManager()
+        {
+            Console.WriteLine("Introduceti numele companiei:");
+            String numeCompanie = Console.ReadLine();
+            Console.WriteLine("Introduceti numarul de telefon al companiei:");
+            String telefonCompanie = Console.ReadLine();
+            Console.WriteLine("Introduceti numarul de fax al companiei:");
+            String faxCompanie = Console.ReadLine();
+            Console.WriteLine("Introduceti  siteul al companiei:");
+            String siteCompanie = Console.ReadLine();
+            Console.WriteLine("Introduceti prenumele Managerului:");
+            String prenumenumeManager = Console.ReadLine();
+            Console.WriteLine("Introduceti numele Managerului:");
+            String numeManager = Console.ReadLine();
+            Console.WriteLine("Introduceti numarul de telefon al Managerului:");
+            String telefonManager = Console.ReadLine();
+            Console.WriteLine($"Datele companiei sunt urmatoarele:\n Nume Companie: {numeCompanie}\n Telefon: {telefonCompanie}\n Fax: {faxCompanie}\n site {siteCompanie}\n Manager: {prenumenumeManager} {numeManager}\n Telefon manager: {telefonManager}");
         }
     }
 }
